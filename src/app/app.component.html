@@ -9,38 +9,32 @@
     <div class="spacer"></div>
 </div>
 
-<div class="row">
-  <div class="container-fluid">
-      <div class="col-md-12">
-          <div class="row">
-              <div class="col-md-6"> 
+<div class="row"  >
+  <div class="container-fluid" >
+      <div class="col-md-12" >
+            <div class="row" [dragula]='"bag-items"'>
+                <div class="col-md-6"  > 
+                    <canvas baseChart 
+                      [datasets]="lineChartData"
+                      [labels]="lineChartLabels"
+                      [options]="lineChartOptions"
+                      [colors]="lineChartColors"
+                      [chartType]="lineChartType"
+                      >
+                    </canvas>
+                 
+                </div>
+                <div class="col-md-6">
                   <canvas baseChart 
-                    [datasets]="lineChartData"
-                    [labels]="lineChartLabels"
-                    [options]="lineChartOptions"
-                    [colors]="lineChartColors"
-                    [chartType]="lineChartType"
-                    >
-                  </canvas>
-               
-              </div>
-              <div class="col-md-6">
-                <canvas baseChart 
-                [data]="pieChartData" 
-                [labels]="pieChartLabels" 
-                [chartType]="pieChartType"
-                [options]="pieChartOptions"
-                [plugins]="pieChartPlugins"
-                [legend]="pieChartLegend">
-              </canvas>
-              </div>
-          </div>
-      </div>
-
-      <br>
-      <div class="col-md-12">
-          <div class="row">
-              <div class="col-md-6"> 
+                  [data]="pieChartData" 
+                  [labels]="pieChartLabels" 
+                  [chartType]="pieChartType"
+                  [options]="pieChartOptions"
+                  [plugins]="pieChartPlugins"
+                  [legend]="pieChartLegend">
+                </canvas>
+                </div>
+                <div class="col-md-6"> 
                   <canvas baseChart 
                   [datasets]="barChartData"
                   [labels]="barChartLabels"
@@ -59,7 +53,9 @@
                   [chartType]="radarChartType">
                 </canvas>
               </div>
-          </div>
+            </div>
+              
+          
       </div>
      
   </div>

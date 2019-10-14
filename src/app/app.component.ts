@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType, RadialChartOptions } from 'chart.js';
 import { Color, Label, SingleDataSet, MultiDataSet } from 'ng2-charts';
+import { DragulaService } from 'ng2-dragula';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,10 +9,10 @@ import { Color, Label, SingleDataSet, MultiDataSet } from 'ng2-charts';
 })
 export class AppComponent {
   title = 'charts-drag-drop';
-  constructor() { }
+ 
+  constructor(){}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
   
   /** Line Charts */
   public lineChartData: ChartDataSets[] = [

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ChartsModule } from 'ng2-charts';
+import { DragulaModule, DragulaService } from 'ng2-dragula';
 
 @NgModule({
   declarations: [
@@ -10,9 +11,11 @@ import { ChartsModule } from 'ng2-charts';
   ],
   imports: [
     BrowserModule,
-    ChartsModule
+    ChartsModule,
+    DragulaModule.forRoot()
+  
   ],
-  providers: [],
+  providers: [DragulaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
